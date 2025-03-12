@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtMorph</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="site-data/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="site-data/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="site-data/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="site-data/favicon-16x16.png">
+    <link rel="manifest" href="site-data/site.webmanifest">
+  </head>
+  <body>
+    <header>
+      <h1>ArtMorph</h1>
+      <p>Create unique abstract art by adjusting the parameters below</p>
+    </header>
+    <main>
+      <div class="container">
+        <div class="controls">
+          <div class="control-group">
+            <h2>Shapes</h2>
+            <div class="control-item">
+              <label for="shape-count">Number of Shapes:</label>
+              <input type="range" id="shape-count" min="5" max="50" value="20">
+              <span id="shape-count-value">20</span>
+            </div>
+            <div class="control-item">
+              <label>Shape Types:</label>
+              <div class="checkbox-group">
+                <div>
+                  <input type="checkbox" id="circles" checked>
+                  <label for="circles">Circles</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="rectangles" checked>
+                  <label for="rectangles">Rectangles</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="triangles" checked>
+                  <label for="triangles">Triangles</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="lines" checked>
+                  <label for="lines">Lines</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="spirals">
+                  <label for="spirals">Spirals</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="stars">
+                  <label for="stars">Stars</label>
+                </div>
+              </div>
+            </div>
+            <div class="control-item">
+              <label for="size-range">Size Range:</label>
+              <input type="range" id="size-range" min="10" max="150" value="80">
+              <span id="size-range-value">80</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <h2>Colors</h2>
+            <div class="control-item">
+              <label>Color Palette:</label>
+              <div class="palette-options">
+                <button class="palette-btn active" data-palette="random">Random</button>
+                <button class="palette-btn" data-palette="warm">Warm</button>
+                <button class="palette-btn" data-palette="cool">Cool</button>
+                <button class="palette-btn" data-palette="pastel">Pastel</button>
+                <button class="palette-btn" data-palette="monochrome">Monochrome</button>
+              </div>
+            </div>
+            <div class="control-item">
+              <label for="opacity-range">Opacity Range:</label>
+              <input type="range" id="opacity-range" min="0.1" max="1" step="0.1" value="0.7">
+              <span id="opacity-range-value">0.7</span>
+            </div>
+            <div class="control-item">
+              <label for="background-color">Background Color:</label>
+              <input type="color" id="background-color" value="#ffffff">
+            </div>
+          </div>
+          <div class="control-group">
+            <h2>Composition</h2>
+            <div class="control-item">
+              <label for="complexity">Complexity:</label>
+              <input type="range" id="complexity" min="1" max="10" value="5">
+              <span id="complexity-value">5</span>
+            </div>
+            <div class="control-item">
+              <label for="overlap">Shape Overlap:</label>
+              <input type="range" id="overlap" min="0" max="100" value="50">
+              <span id="overlap-value">50%</span>
+            </div>
+          </div>
+          <div class="button-group">
+            <button id="generate-btn">Generate New Art</button>
+            <button id="save-btn">Save Artwork</button>
+          </div>
+        </div>
+        <div class="canvas-container">
+          <canvas id="artCanvas"></canvas>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Created with ❤️ by <a href="https://github.com/yourusername/abstract-art-generator" target="_blank">ThatSINEWAVE</a></p>
+      <a href="https://github.com/yourusername/abstract-art-generator" target="_blank">View on GitHub</a></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
